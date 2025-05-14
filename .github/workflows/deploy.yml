@@ -24,8 +24,8 @@ jobs:
 
       - name: Deploy to AWS EC2
         run: |
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=yes ${{ secrets.AWS_EC2_USER }}@${{ secrets.AWS_EC2_HOST }} << 'EOF'
-            cd /home/${ secrets.AWS_EC2_USER }/new/backend
+          ssh -i ~/.ssh/id_rsa -o ${{ secrets.AWS_EC2_USER }}@${{ secrets.AWS_EC2_HOST }} << 'EOF'
+            cd ${ secrets.AWS_EC2_USER }/new/backend
             npm install
             npm start
           EOF
