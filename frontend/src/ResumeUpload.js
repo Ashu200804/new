@@ -42,7 +42,7 @@ function ResumeUpload() {
         feedback: '/resume-feedback',
       }[mode];
 
-      const res = await axios.post(`http://localhost:5000${endpoint}`, formData, {
+      const res = await axios.post(`http://13.232.170.19:5000${endpoint}`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
